@@ -14,3 +14,26 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(function() {
+
+    $('#new_blogpost').submit(function (e) {
+        e.preventDefault();
+	if ($('#blogpost_title').val() !== "") {
+	    if ($('#blogpost_contents').val() !== "") {
+		this.submit();
+		return true;
+	    } else {
+		$('.error-msg').html('You must enter contents for the blog post.');
+		$('.error-msg').fadeIn();
+		return false;
+	    }
+
+	} else {
+	    $('.error-msg').html('You must enter a title for the blog post.');
+	    $('.error-msg').fadeIn();
+	    return false;
+	}
+    });
+
+
+});

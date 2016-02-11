@@ -111,6 +111,7 @@ class Spellchecker
     unless known([w]).empty?
       return [w] 
     else
+      puts "here is known!"
       eds = known(edits1(w))
       if eds.empty? #if no distance 1 edits
         eds = known_edits2(w) #try distance 2 edits

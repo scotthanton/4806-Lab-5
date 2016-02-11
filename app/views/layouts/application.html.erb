@@ -8,7 +8,18 @@
 </head>
 <body>
 
+<div id="navigation">
+	<div class="container">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><%= link_to 'New Blogpost', new_blogpost_path %></li>
+		</ul>
+	</div>
+</div>
+
+<div class="container">
 <%= yield %>
+</div>
 
 </body>
 </html>
